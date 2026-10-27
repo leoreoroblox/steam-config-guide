@@ -123,6 +123,28 @@
             color: #555;
             line-height: 1.5;
         }
+           /* 语言切换器样式 */
+        .lang-switcher {
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background-color: white;
+            cursor: pointer;
+            font-size: 14px;
+            z-index: 1000;
+            outline: none;
+        }
+        @media (max-width: 600px) {
+            .lang-switcher {
+                position: static;
+                display: block;
+                margin: 15px auto 0;
+                width: 90%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -132,7 +154,16 @@
         ⚠️ 风险提示：本工具仅生成配置文件，修改客户端可能导致 VAC 封禁或账号锁定，请自行承担风险。
     </div>
 
+    <!-- 多语言切换下拉框 (放到横幅的下面) -->
+    <select id="langSwitcher" class="lang-switcher" onchange="changeLanguage(this.value)">
+        <option value="zh-CN">简体中文</option>
+        <option value="zh-TW">繁體中文 (台灣)</option>
+        <option value="zh-HK">繁體中文 (香港)</option>
+        <option value="en">English</option>
+    </select>
+
     <div class="container">
+        <!-- 下面的内容保持不变... -->
         <h1>Steam 轻量入库工具</h1>
         <p class="subtitle">请输入游戏名称或 AppID 开始生成配置文件</p>
 
