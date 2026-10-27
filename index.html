@@ -79,6 +79,50 @@
             font-size: 12px;
             color: #999;
         }
+          /* 以下是新增的移动端适配和 FAQ 样式 */
+        @media (max-width: 600px) {
+            .search-box {
+                flex-direction: column;
+                align-items: center;
+            }
+            input[type="text"] {
+                width: 90%;
+            }
+            button {
+                width: 90%;
+            }
+        }
+        
+        .faq-section {
+            margin-top: 40px;
+            text-align: left;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        .faq-section h3 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        details {
+            background: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        summary {
+            font-weight: bold;
+            color: #0366d6;
+            outline: none;
+        }
+        details p {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+            line-height: 1.5;
+        }
     </style>
 </head>
 <body>
@@ -103,6 +147,25 @@
             等待搜索...
         </div>
 
+              <!-- 新增：常见问题 FAQ 模块 -->
+        <div class="faq-section">
+            <h3>常见问题 (FAQ)</h3>
+            
+            <details>
+                <summary>使用这个工具会被封号吗？</summary>
+                <p>修改 Steam 客户端文件或注入脚本属于违反 Steam 用户协议的行为，存在导致 VAC 封禁或账户锁定的风险。本网站仅提供配置生成，风险请自行承担。建议仅在离线模式或小号上测试。</p>
+            </details>
+            
+            <details>
+                <summary>为什么搜索或生成失败？</summary>
+                <p>数据源可能随时失效，或者该游戏暂无公开的配置数据。你也可以尝试直接输入准确的 AppID 进行搜索。</p>
+            </details>
+            
+            <details>
+                <summary>网站有配套的 exe 或 dll 软件吗？</summary>
+                <p>绝对没有。 本网站是纯网页工具，不包含、不分发任何可执行文件。请勿下载任何声称是本网站配套的 exe/dll，以免中木马病毒。</p>
+            </details>
+        </div>
         <p class="footer-note">
             免责声明：本网站不包含、不分发任何可执行文件。请支持正版游戏。<br>
             <a href="https://github.com/leoreoroblox/steam-config-guide" target="_blank">查看 GitHub 仓库</a>
